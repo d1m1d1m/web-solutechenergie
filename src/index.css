@@ -8,5 +8,5 @@
 @tailwind utilities;
 
 #root {
-    @apply flex min-h-screen flex-col;
+	@apply flex min-h-screen flex-col;
 }
