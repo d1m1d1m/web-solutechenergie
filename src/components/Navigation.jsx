@@ -2,9 +2,7 @@ import useWindowScroll from "../hooks/useWindowScroll";
 import { MAIN_MENU_ITEMS } from "../constants/Menus";
 import clsx from "clsx";
 import List from "./List";
-import { PhoneIcon, Droplets } from "lucide-react";
-import { DropletsIcon } from "lucide-react";
-import { DropletIcon } from "lucide-react";
+import { PhoneIcon, DropletIcon } from "lucide-react";
 
 const Navigation = () => {
 	const { currentY } = useWindowScroll();
@@ -14,14 +12,15 @@ const Navigation = () => {
 			className={clsx(
 				"h-24 fixed top-0 z-50 w-full flex border-b border-white/30 font-inter text-white transition-colors backdrop-blur",
 				{
-					"bg-primary-700/75": currentY > 10,
+					"bg-primary-900 shadow-md border-b-transparent":
+						currentY > 10,
 				},
 			)}
 		>
 			{/* Barre de navigation principale */}
 			<nav className="container mx-auto flex items-center justify-between py-2">
 				<a
-					className="flex flex-col items-center justify-center gap-2 font-raleway text-lg font-bold uppercase text-white"
+					className="flex items-center justify-center gap-2 font-raleway text-lg font-bold uppercase text-white"
 					href="/"
 				>
 					<DropletIcon className="size-8" />

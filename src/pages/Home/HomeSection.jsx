@@ -13,13 +13,13 @@ const HomeSection = () => {
 	return (
 		<section id="home" className="h-screen">
 			<Swiper
-				className="h-full"
-				// autoplay={{ delay: 10000 }}
+				className="h-full hover:cursor-grab"
+				autoplay={{ delay: 10000 }}
 				pagination={{
 					clickable: true,
 					bulletClass:
-						"inline-block w-12 h-1 rounded-full bg-white/50 mx-2 hover:h-4 transition-all cursor-pointer",
-					bulletActiveClass: "bg-white",
+						"inline-block w-12 h-1 rounded-full bg-white bg-opacity-50 mx-2 hover:h-4 transition-all hover:cursor-pointer",
+					bulletActiveClass: "bg-opacity-100",
 				}}
 				modules={[Navigation, Pagination, Autoplay]}
 			>
