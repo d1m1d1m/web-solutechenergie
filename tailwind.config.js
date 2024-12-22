@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-	safelist: ["swiper-pagination-bullet", "swiper-pagination-bullet-active"],
 	theme: {
 		extend: {
 			keyframes: {
@@ -27,8 +27,6 @@ export default {
 			},
 			fontFamily: {
 				inter: ["Inter"],
-				"work-sans": ["Work Sans"],
-				mulish: ["Mulish"],
 				raleway: ["Raleway"],
 			},
 			colors: {
@@ -46,19 +44,21 @@ export default {
 					950: "#0f345c",
 				},
 			},
-
 			backgroundImage: {
-				hero1: `
-                    linear-gradient(180deg, rgba(12, 76, 147, 0.7) 14.71%, rgba(12, 76, 147, 0.7) 78.23%),
+				"hero-particular": `
+                    linear-gradient(to right, rgba(15, 52, 92, 0.8) 14.71%, rgba(15, 52, 92, 0.8) 78.23%),
                     url('/hero/1.jpg')
                 `,
-				hero2: `
-                    linear-gradient(180deg, rgba(12, 76, 147, 0.7) 14.71%, rgba(12, 76, 147, 0.7) 78.23%),
+				"hero-commercial": `
+                    linear-gradient(to right, rgba(15, 52, 92, 0.8) 14.71%, rgba(15, 52, 92, 0.8) 78.23%),
                     url('/hero/2.jpg')
                 `,
-				hero3: `
-                    linear-gradient(180deg, rgba(12, 76, 147, 0.7) 14.71%, rgba(12, 76, 147, 0.7) 78.23%),
-                    url('/hero/3.jpg')
+				"hero-emergency": `
+                    linear-gradient(to right, rgba(15, 52, 92, 0.8) 14.71%, rgba(15, 52, 92, 0.8) 78.23%),
+                    url('/hero/emergency.jpg')
+                `,
+				logo: `
+                    linear-gradient(45deg, rgba(2,0,36,1) 10%, rgba(0,212,255,1) 10%)
                 `,
 			},
 		},
