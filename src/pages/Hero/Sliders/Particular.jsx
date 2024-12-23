@@ -2,11 +2,14 @@ import List from "../../../components/List";
 import { ArrowRightIcon } from "lucide-react";
 import clsx from "clsx";
 import { motion } from "motion/react";
+import Input from "../../../components/Form/Input";
+import TextArea from "../../../components/Form/TextArea";
+import SubmitButton from "../../../components/Form/SubmitButton";
 
 const ParticularSlide = () => {
 	return (
-		<div className="container mx-auto flex items-center h-full">
-			<div className="text-white basis-1/2">
+		<div className="container mx-auto flex items-center h-full gap-32 px-12">
+			<div className="text-white basis-2/3">
 				<h1 className="mb-4 font-raleway text-6xl font-extrabold leading-snug uppercase">
 					Confort et Sérénité à Domicile
 				</h1>
@@ -58,7 +61,36 @@ const ParticularSlide = () => {
 				/>
 			</div>
 
-			<form className="basis-1/2" action="#"></form>
+			<form
+				className="basis-1/3 bg-primary-50 text-primary-950 p-12 space-y-6 mt-auto mb-4 rounded-md"
+				action="#"
+			>
+				<header>
+					<h2 className="text-2xl">
+						Devis gratuit et sans engagement !
+					</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Ea, ducimus.
+					</p>
+				</header>
+
+				<div className="flex gap-8">
+					<Input label="Nom" name="name" required />
+					<Input label="Téléphone" name="phone" type="tel" required />
+				</div>
+				<Input label="Adresse e-mail" name="email" required />
+				<Input
+					label="Type de prestation"
+					name="service"
+					type="text"
+					required
+				/>
+
+				<TextArea label="Votre message" name="object" required />
+
+				<SubmitButton>Valider ma demande</SubmitButton>
+			</form>
 		</div>
 	);
 };

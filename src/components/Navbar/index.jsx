@@ -10,6 +10,7 @@ const Navbar = () => {
 	const [hidden, setHidden] = useState(false);
 
 	useMotionValueEvent(scrollY, "change", (latest) => {
+		console.log(scrollY);
 		const previous = scrollY.getPrevious();
 
 		if (latest > previous && latest > 150) {
@@ -21,10 +22,7 @@ const Navbar = () => {
 
 	return (
 		<motion.header
-			className={clsx(
-				"fixed z-50 w-full text-white bg-primary-700 backdrop-blur",
-				{},
-			)}
+			className={clsx("fixed z-50 w-full text-white", {})}
 			variants={{
 				visible: { y: 0 },
 				hidden: { y: "-100%" },
