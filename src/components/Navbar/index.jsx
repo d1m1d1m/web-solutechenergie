@@ -23,9 +23,12 @@ const Navbar = () => {
 
 	return (
 		<motion.nav
-			className={clsx("fixed z-50 w-full text-white", {
-				"bg-primary-900": enableBackground,
-			})}
+			className={clsx(
+				"fixed z-50 w-full text-white bg-primary-900 bg-opacity-0 transition-colors",
+				{
+					"bg-opacity-100": enableBackground,
+				},
+			)}
 		>
 			<div className="container mx-auto flex justify-between">
 				<Logo />

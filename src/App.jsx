@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import Navbar from "./components/Navbar";
-import HomeSection from "./pages/Hero/HomeSection";
-import AboutSection from "./pages/About/AboutSection";
+import Hero from "./sections/Hero/Hero";
+import About from "./sections/About/About";
 import List from "./components/List";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
 
 			<main className="h-full">
 				{/* L'accueil */}
-				<HomeSection />
+				<Hero />
 
 				{/* Pourquoi nous ? */}
 				<section id="services" className="bg-white h-screen py-16">
@@ -44,7 +44,7 @@ const App = () => {
 				</section>
 
 				{/* A propos de nous */}
-				<AboutSection />
+				<About />
 			</main>
 
 			<footer></footer>

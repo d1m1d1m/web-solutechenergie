@@ -5,7 +5,7 @@ const CallUsLink = () => {
 	return (
 		<a
 			className={clsx(
-				"group flex items-center gap-3 px-6 flex-nowrap text-nowrap backdrop-blur-lg",
+				"group flex items-center gap-3 px-6 flex-nowrap text-nowrap",
 				"hover:bg-white hover:text-primary-700",
 			)}
 			href="tel:0768660436"

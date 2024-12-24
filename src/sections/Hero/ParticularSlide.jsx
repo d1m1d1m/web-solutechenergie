@@ -1,10 +1,10 @@
-import List from "../../../components/List";
+import List from "../../components/List";
 import { ArrowRightIcon } from "lucide-react";
 import clsx from "clsx";
 import { motion } from "motion/react";
-import Input from "../../../components/Form/Input";
-import TextArea from "../../../components/Form/TextArea";
-import SubmitButton from "../../../components/Form/SubmitButton";
+import Input from "../../components/Form/Input";
+import TextArea from "../../components/Form/TextArea";
+import SubmitButton from "../../components/Form/SubmitButton";
 
 const ParticularSlide = () => {
 	return (
@@ -62,7 +62,7 @@ const ParticularSlide = () => {
 			</div>
 
 			<form
-				className="basis-1/4 bg-primary-50 text-primary-950 p-12 space-y-6 rounded-md"
+				className="relative top-12 basis-1/4 bg-slate-50 shadow-sm text-primary-950 p-12 space-y-6 rounded-md"
 				action="#"
 			>
 				<header>

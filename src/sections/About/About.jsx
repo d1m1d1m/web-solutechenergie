@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import ServiceCard from "../../components/Services/ServiceCard";
 
-const AboutSection = () => {
+const About = () => {
 	return (
 		<section id="services" className="bg-primary-50">
 			<div className="container mx-auto relative before:block before:top-16 before:content-['services'] before:uppercase before:absolute before:inset-0 before:-z-10 before:text-9xl before:font-mulish before:font-extrabold before:text-slate-300 py-16">
@@ -95,4 +95,4 @@ const AboutSection = () => {
 	);
 };
 
-export default AboutSection;
+export default About;
