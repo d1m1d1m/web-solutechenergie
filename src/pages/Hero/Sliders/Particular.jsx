@@ -9,7 +9,7 @@ import SubmitButton from "../../../components/Form/SubmitButton";
 const ParticularSlide = () => {
 	return (
 		<div className="container mx-auto flex items-center h-full gap-32 px-12">
-			<div className="text-white basis-2/3">
+			<div className="text-white basis-3/4">
 				<h1 className="mb-4 font-raleway text-6xl font-extrabold leading-snug uppercase">
 					Confort et Sérénité à Domicile
 				</h1>
@@ -62,11 +62,11 @@ const ParticularSlide = () => {
 			</div>
 
 			<form
-				className="basis-1/3 bg-primary-50 text-primary-950 p-12 space-y-6 mt-auto mb-4 rounded-md"
+				className="basis-1/4 bg-primary-50 text-primary-950 p-12 space-y-6 rounded-md"
 				action="#"
 			>
 				<header>
-					<h2 className="text-2xl">
+					<h2 className="text-2xl mb-4">
 						Devis gratuit et sans engagement !
 					</h2>
 					<p>

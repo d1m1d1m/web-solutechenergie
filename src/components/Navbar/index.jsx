@@ -1,43 +1,41 @@
 import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Logo from "./Logo";
-import MainMenu from "./MainMenu";
+import Menu from "./Menu";
 import CallUsLink from "./PhoneLink";
+import GetAQuote from "./QuoteLink";
 import clsx from "clsx";
 import { useState } from "react";
 
 const Navbar = () => {
 	const { scrollY } = useScroll();
-	const [hidden, setHidden] = useState(false);
+	const [enableBackground, setEnableBackground] = useState(false);
 
 	useMotionValueEvent(scrollY, "change", (latest) => {
-		console.log(scrollY);
 		const previous = scrollY.getPrevious();
 
-		if (latest > previous && latest > 150) {
-			setHidden(true);
-		} else {
-			setHidden(false);
+		if (latest > previous && latest > 40) {
+			setEnableBackground(true);
+		}
+		if (latest <= 40) {
+			setEnableBackground(false);
 		}
 	});
 
 	return (
-		<motion.header
-			className={clsx("fixed z-50 w-full text-white", {})}
-			variants={{
-				visible: { y: 0 },
-				hidden: { y: "-100%" },
-			}}
-			animate={hidden ? "hidden" : "visible"}
-			transition={{ duration: 0.35, ease: "easeInOut" }}
+		<motion.nav
+			className={clsx("fixed z-50 w-full text-white", {
+				"bg-primary-900": enableBackground,
+			})}
 		>
 			<div className="container mx-auto flex justify-between">
 				<Logo />
 
-				<MainMenu />
+				<Menu />
 
 				<CallUsLink />
+				<GetAQuote />
 			</div>
-		</motion.header>
+		</motion.nav>
 	);
 };
 
