@@ -5,7 +5,7 @@ import clsx from "clsx";
 const Menu = () => {
 	return (
 		<List
-			className="flex items-center mr-auto"
+			className="flex items-center"
 			items={MAIN_MENU_ITEMS}
 			renderItem={({ href, label }, index) => (
 				<li key={index}>

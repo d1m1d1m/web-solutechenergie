@@ -1,95 +1,105 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
-import ServiceCard from "../../components/Services/ServiceCard";
+import clsx from "clsx";
+import List from "../../components/List";
+import { useState } from "react";
 
 const About = () => {
+	const [activeTab, setActiveTab] = useState(0);
+
 	return (
-		<section id="services" className="bg-primary-50">
-			<div className="container mx-auto relative before:block before:top-16 before:content-['services'] before:uppercase before:absolute before:inset-0 before:-z-10 before:text-9xl before:font-mulish before:font-extrabold before:text-slate-300 py-16">
-				<header className="flex items-center mb-16">
-					<div className="basis-1/2">
-						<span className="flex text-primary-500 gap-4 items-center text-2xl before:block before:h-[2px] before:w-10 before:bg-current">
-							Nos prestations
-						</span>
-						<h1 className="font-raleway text-6xl font-bold text-primary-950 mt-4 leading-tight">
-							Du tuyau qui siffle au chauffe-eau qui grésille
-						</h1>
-					</div>
-					<p className="text-base basis-1/2">
-						Lorem ipsum dolor, sit amet consectetur adipisicing
-						elit. Incidunt, reprehenderit nobis eaque nihil ratione
-						dolorum officiis culpa autem odit necessitatibus impedit
-						ipsum consequuntur, enim labore, minima architecto
-						molestias et. Delectus.
-					</p>
+		<section id="services" className="bg-white h-screen py-16">
+			<div className="container mx-auto">
+				<header className="flex justify-center items-center mb-16 text-center">
+					<h1 className="font-raleway text-6xl font-bold text-primary-950 mt-4 leading-tight">
+						Pourquoi nous choisir ?
+					</h1>
 				</header>
 
-				<Swiper
-					autoplay={{
-						reverseDirection: true,
-					}}
-					modules={[Autoplay]}
-					spaceBetween={32}
-					slidesPerView={4}
-				>
-					<SwiperSlide>
-						<ServiceCard
-							img="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.renovationettravaux.fr%2Fwp-content%2Fuploads%2F2020%2F10%2Finstallation-chauffe-eau.jpeg&f=1&nofb=1&ipt=2d93be635db6aae1d0a52f5f989bedbbdf8c7a05befa882be50cef76f9c9f023&ipo=images"
-							title="Chauffage"
-							services={[
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-							]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ServiceCard
-							img="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Faws.wideinfo.org%2Fwideinfo.org%2Fwp-content%2Fuploads%2F2019%2F02%2F27214657%2Fcropped-slide-3.jpg&f=1&nofb=1&ipt=d27b1ae99733e574838926b3bd5c2b59e510ee1daf89c536cf9eed8dffbf7ff3&ipo=images"
-							title="plomberie"
-							services={[
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-							]}
-						/>
-					</SwiperSlide>
-					<SwiperSlide>
-						<ServiceCard
-							img="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fazaneo.com%2Fwp-content%2Fuploads%2F2023%2F07%2Fprix-pompe-chaleur-air-air-120m2.png&f=1&nofb=1&ipt=02ebea3976754bd3ffa7d281ab437bec9f41152959b2a5acca2e618a676764fd&ipo=images"
-							title="climatisation"
-							services={[
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-							]}
-						/>
-					</SwiperSlide>
+				<div>
+					<div className="mx-auto flex gap-4 p-1 mb-16 border w-1/2">
+						<button
+							className={clsx(
+								"before:absolute before:top-0 before:left-0 before:content-['+'] before:size-6",
+								"relative text-primary-950 p-4 basis-1/3",
+								{
+									"bg-primary-700 text-white font-bold":
+										activeTab === 0,
+									"bg-none text-primary-950": activeTab !== 0,
+								},
+							)}
+							value="approch"
+							onClick={(e) => setActiveTab(0)}
+						>
+							Notre approche
+						</button>
+						<button
+							className={clsx(
+								"before:absolute before:top-0 before:left-0 before:content-['+'] before:size-6",
+								"relative text-primary-950 p-4 basis-1/3",
+								{
+									"bg-primary-700 text-white font-bold":
+										activeTab === 1,
+									"bg-none text-primary-950": activeTab !== 1,
+								},
+							)}
+							value="approch"
+							onClick={(e) => setActiveTab(1)}
+						>
+							Un expert de A à Z
+						</button>
+						<button
+							className={clsx(
+								"before:absolute before:top-0 before:left-0 before:content-['+'] before:size-6",
+								"relative text-primary-950 p-4 basis-1/3",
+								{
+									"bg-primary-700 text-white font-bold":
+										activeTab === 2,
+									"bg-none text-primary-950": activeTab !== 2,
+								},
+							)}
+							value="approch"
+							onClick={(e) => setActiveTab(2)}
+						>
+							Notre mission
+						</button>
+					</div>
 
-					<SwiperSlide>
-						<ServiceCard
-							img="https://hellodepann.fr/wp-content/uploads/2023/11/AdobeStock_238354696-1536x1024-1.jpeg"
-							title="Dépannages"
-							services={[
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-								"Lorem ipsum dolor sit amet.",
-							]}
-						/>
-					</SwiperSlide>
-				</Swiper>
+					<div
+						className={clsx("flex gap-4", {
+							visible: activeTab === 0,
+							hidden: activeTab !== 0,
+						})}
+					>
+						<div className="flex flex-col">
+							<h3>Titre super cool ici</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Voluptatum, eveniet
+								consequuntur iste velit rerum reiciendis magni
+								corrupti provident accusamus explicabo, ipsum
+								illum architecto ducimus. Quae magni provident
+								sequi asperiores quasi.
+							</p>
+						</div>
+					</div>
+
+					<div
+						className={clsx("bg-blue-700", {
+							visible: activeTab === 1,
+							hidden: activeTab !== 1,
+						})}
+					>
+						Two content
+					</div>
+
+					<div
+						className={clsx("bg-green-700", {
+							visible: activeTab === 2,
+							hidden: activeTab !== 2,
+						})}
+					>
+						One content
+					</div>
+				</div>
 			</div>
 		</section>
 	);

@@ -26,7 +26,7 @@ const Navbar = () => {
 			className={clsx(
 				"fixed z-50 w-full text-white bg-primary-900 bg-opacity-0 transition-colors",
 				{
-					"bg-opacity-100": enableBackground,
+					"bg-opacity-100 shadow-lg": enableBackground,
 				},
 			)}
 		>
@@ -35,8 +35,10 @@ const Navbar = () => {
 
 				<Menu />
 
-				<CallUsLink />
-				<GetAQuote />
+				<div className="flex">
+					<CallUsLink />
+					<GetAQuote />
+				</div>
 			</div>
 		</motion.nav>
 	);
