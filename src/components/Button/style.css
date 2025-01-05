@@ -1,0 +1,39 @@
+.btn {
+	display: inline-flex;
+	gap: 0.8em;
+	align-items: center;
+	padding: 0 1.5rem;
+}
+
+.btn__icon svg {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	fill: currentColor;
+	stroke: transparent;
+	width: 1.25em;
+	height: auto;
+}
+
+.btn--primary {
+	background-color: rgb(var(--primary-700));
+	color: #fff;
+
+	&:hover {
+		color: rgb(var(--primary-700));
+		background-color: #fff;
+	}
+}
+
+.btn--secondary {
+	background-color: transparent;
+	border-width: 1px;
+	border-color: #fff;
+	border-style: solid;
+	color: #fff;
+
+	&:hover {
+		color: rgb(var(--primary-700));
+		background-color: #fff;
+	}
+}

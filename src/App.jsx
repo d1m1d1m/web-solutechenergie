@@ -1,23 +1,14 @@
 import { Fragment } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./sections/Hero/Hero";
-import About from "./sections/About/About";
-import Services from "./sections/Services/Services";
+import Navbar from "./components/Navbar/Navbar";
+import HeroSection from "./sections/Hero";
 
 const App = () => {
 	return (
 		<Fragment>
 			<Navbar />
 
-			<main className="h-full">
-				{/* L'accueil */}
-				<Hero />
-
-				{/* A propos de nous */}
-				<About />
-
-				{/* Prestations */}
-				<Services />
+			<main>
+				<HeroSection />
 			</main>
 		</Fragment>
 	);

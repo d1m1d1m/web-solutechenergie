@@ -1,0 +1,64 @@
+main {
+	height: 100vh;
+}
+
+#hero {
+	display: flex;
+	padding-top: 84px;
+	height: 95%;
+	background: linear-gradient(
+			to top,
+			rgba(var(--primary-950), 0.85),
+			rgba(var(--primary-950), 0.85)
+		),
+		url("./hero/particular.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+}
+#hero h1 {
+	margin: 0;
+	font-size: 4em;
+}
+
+#hero .left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-basis: 50%;
+}
+
+#hero p {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	margin-bottom: 4rem;
+}
+
+.btn__group {
+	width: 100%;
+	display: flex;
+	gap: 2rem;
+}
+
+.btn__group .btn {
+	flex-basis: 50%;
+}
+
+.btn {
+	padding: 1rem 2rem;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.btn--primary {
+	color: #fff;
+	background-color: rgba(var(--primary-700), 1);
+	border-color: rgba(var(--primary-700), 1);
+}
+
+.btn--secondary {
+	color: #fff;
+	background-color: transparent;
+	border-color: #fff;
+}
