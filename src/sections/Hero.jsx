@@ -1,6 +1,15 @@
+import Field from "../components/Form/Field";
+import FieldBox from "../components/Form/FieldBox";
+import FieldStack from "../components/Form/FieldStack";
 import "./Hero.css";
 
 const HeroSection = () => {
+	const handlerQuoteForm = (e) => {
+		e.preventDefault();
+
+		const formData = new FormData(e.target);
+	};
+
 	return (
 		<section id="hero" className="container">
 			<div className="left">
@@ -21,6 +30,39 @@ const HeroSection = () => {
 						Voir nos réalisations
 					</a>
 				</div>
+			</div>
+
+			<div className="right">
+				<form onSubmit={handlerQuoteForm} action="#">
+					<h2>Demandez votre devis rapidement et gratuitement !</h2>
+
+					<FieldStack>
+						<Field label="Nom" name="name" required />
+						<Field label="Prénom" name="forename" required />
+					</FieldStack>
+
+					<Field
+						label="Adresse mail"
+						type="email"
+						name="email"
+						required
+					/>
+
+					<Field
+						label="Téléphone"
+						type="phone"
+						name="phone"
+						required
+					/>
+
+					<FieldBox
+						label="Décrivez votre demande"
+						name="message"
+						required
+					/>
+
+					<input type="submit" value="Envoyer ma demande" />
+				</form>
 			</div>
 		</section>
 	);

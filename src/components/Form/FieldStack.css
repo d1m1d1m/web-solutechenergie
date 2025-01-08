@@ -1,0 +1,16 @@
+/* FIELD : Stack X */
+.field-group {
+	display: flex;
+	gap: 1em;
+
+	&.field-group--x {
+		flex-direction: row;
+	}
+	&.field-group--y {
+		flex-direction: column;
+	}
+}
+
+.field-group:only-child {
+	flex-basis: 50%;
+}

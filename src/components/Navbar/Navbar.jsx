@@ -1,8 +1,6 @@
 import List from "../List/List";
-import { PhoneIcon, MailIcon, MapPinIcon } from "lucide-react";
+import { PhoneIcon } from "lucide-react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png";
-import { DropletsIcon } from "lucide-react";
 
 const MAIN_MENU_ITEMS = [
 	{
@@ -29,46 +27,47 @@ const MAIN_MENU_ITEMS = [
 
 const Navbar = () => {
 	return (
-		<header className="headbar">
-			<nav className="navbar">
-				<a className="brand" href="#">
-					{/* <DropletsIcon className="brand__img" /> */}
-					SOLUTECHENERGIE
+		<nav className="navbar">
+			<a className="brand" href="#">
+				SOLUTECHENERGIE
+			</a>
+
+			<List
+				className="menu"
+				role="list"
+				items={MAIN_MENU_ITEMS}
+				renderItem={({ href, label }, index) => (
+					<li className="menu__item" key={index}>
+						<a
+							className={`menu__link ${index === 0 ? "menu__link--active" : ""}`}
+							href={href}
+							children={label}
+						/>
+					</li>
+				)}
+			/>
+
+			<div className="test">
+				<a className="cta cta--phone" href="tel:0768660436">
+					<span className="cta__icon">
+						<PhoneIcon />
+					</span>
+
+					<div className="cta__content">
+						<span>Une urgence ?</span>
+						<span>(+33)7 04 05 02 01</span>
+					</div>
 				</a>
 
-				<List
-					className="menu"
-					role="list"
-					items={MAIN_MENU_ITEMS}
-					renderItem={({ href, label }, index) => (
-						<li className="menu__item" key={index}>
-							<a
-								className={`menu__link ${index === 0 ? "menu__link--active" : ""}`}
-								href={href}
-								children={label}
-							/>
-						</li>
-					)}
-				/>
-
-				<div className="test">
-					<a className="cta cta--phone" href="tel:0768660436">
-						<span className="cta__icon">
-							<PhoneIcon />
-						</span>
-
-						<div className="cta__content">
-							<span>Une urgence ?</span>
-							<span>(+33)7 04 05 02 01</span>
-						</div>
-					</a>
-
-					<a className="cta cta--quote" href="tel:0768660436">
-						<span>Demander un devis</span>
-					</a>
-				</div>
-			</nav>
-		</header>
+				<a
+					target="_blank"
+					className="cta cta--quote"
+					href="tel:0768660436"
+				>
+					<span>Demander un devis gratuitement</span>
+				</a>
+			</div>
+		</nav>
 	);
 };
 

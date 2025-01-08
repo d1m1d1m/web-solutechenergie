@@ -45,8 +45,16 @@ html {
 }
 
 a {
+	position: relative;
+	display: flex;
+	gap: 16px;
 	text-decoration: none;
 	color: inherit;
+}
+
+a[target="_blank"]::after {
+	content: "->";
+	font-size: 1.5em;
 }
 
 ul[role="list"] {
