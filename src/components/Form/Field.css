@@ -20,6 +20,7 @@
 
 /* FIELD : Input */
 .field__input {
+	display: block;
 	width: 100%;
 	padding: 0.5rem 1rem;
 	border-bottom: 1px solid rgba(var(--primary-700), 0.5);

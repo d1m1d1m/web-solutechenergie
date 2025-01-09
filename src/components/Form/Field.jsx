@@ -16,4 +16,3 @@ const Field = ({ name, label, type = "text", required = false }) => {
 };
 
 export default Field;
- 
