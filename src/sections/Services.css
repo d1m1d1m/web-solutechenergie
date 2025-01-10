@@ -1,4 +1,52 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+#service {
+	padding-bottom: 5rem;
+}
+
 .section__title {
 	font-size: 4rem;
 	text-align: center;
+}
+
+/* Slider fait maison */
+.services {
+	--items: 4;
+	--gap: 1rem;
+
+	display: flex;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--gap);
+
+	padding: calc(var(--slider-gap));
+	margin: calc(-1 * var(--slider-gap));
+	overflow-x: auto;
+	scroll-snap-type: x proximity;
+	scroll-behavior: smooth;
+}
+
+.service {
+	color: #fff;
+	scroll-snap-align: center;
+	max-width: calc((100% - (var(--items) - 1 * var(--gap)) / var(--items)));
+	min-width: calc((100% - (var(--items) - 1 * var(--gap)) / var(--items)));
+	width: calc((100% - (var(--items) - 1 * var(--gap)) / var(--items)));
+	padding: 1rem;
+	background-color: rgb(var(--primary-50), 1);
+	background: linear-gradient(
+			to top right,
+			rgba(var(--primary-950), 0.8),
+			rgba(var(--primary-950), 0.8)
+		),
+		url("https://www.guide-artisan-centre.fr/img/actualites/1600x640/les-differents-travaux-de-plomberie.jpg");
+	background-size: cover;
+	min-height: 350px;
+	background-position: top;
+}
+
+.service p {
 }
